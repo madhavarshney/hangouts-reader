@@ -160,7 +160,7 @@ You can view the source code <a href="https://github.com/Jessecar96/hangouts-rea
 				participants.push(name);
 				participants_obj[gaia_id] = name;
 			}
-			var participants_string = participants.join(", ");
+			var participants_string = conversation_metadata['name'] || participants.join(", ");
 
 			// Add to list
 			$(".convo-list").append("<a href=\"javascript:void(0);\" onclick=\"switchConvo('"+id+"')\" class=\"list-group-item\">" + participants_string + "</a>");
